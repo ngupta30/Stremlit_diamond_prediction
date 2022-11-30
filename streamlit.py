@@ -1,14 +1,12 @@
 import xgboost as xgb
 import streamlit as st
 import pandas as pd
-
 #Loading up the Regression model we created
 model = xgb.XGBRegressor()
 model.load_model('xgb_model.json')
 
 #Caching the model for faster loading
 @st.cache
-
 
 # Define the prediction function
 def predict(carat, cut, color, clarity, depth, table, x, y, z):
@@ -56,7 +54,6 @@ def predict(carat, cut, color, clarity, depth, table, x, y, z):
     elif clarity == 'IF':
         clarity = 7
     
-
     prediction = model.predict(pd.DataFrame([[carat, cut, color, clarity, depth, table, x, y, z]], columns=['carat', 'cut', 'color', 'clarity', 'depth', 'table', 'x', 'y', 'z']))
     return prediction
 

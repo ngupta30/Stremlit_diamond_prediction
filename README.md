@@ -1,7 +1,5 @@
 # Diamond Price Predictor App using Streamlit #
 
-## By: Nate DiRenzo ##
-
 ### Statement of Purpose ###
 
 The purpose of this repository is as a tutorial for creating a regression model that predicts the price of a diamond, and building a simple frontend application to make the model publicly available using Streamlit.
